@@ -1,0 +1,31 @@
+body {
+	margin: 0;
+}
+
+.nav-lst {
+	font-size: 1.2em;
+}
+
+.user-list {
+	padding: 20px;
+	font-size: 1.2em;
+}
+
+.container {
+	margin: 5px 16px;
+	padding: 5px 10px;
+}
+
+.form-adjust-label{
+	margin-bottom: 12px;
+}
+
+.form-adjust-field{
+	margin-bottom: 16px;
+}
+
+.pull-right {
+	float: right;
+	font-size: 1.25em;
+}
+

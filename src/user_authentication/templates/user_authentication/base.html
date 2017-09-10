@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.25">
+    <title>{% block head_title %}-Insert Title-{% endblock head_title %}</title>
+    {% include "snippets/bootstrap_snippet.html" %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        {% if user.is_authenticated %}
+            <span class="pull-right">Logged in as {{ user.get_username }} - <a href="/logout">Logout</a></span>
+        {% else %}
+            <span class="pull-right"><a href="/login" >Click To Login</a></span>
+        {% endif %}
+        
+    	{% include "snippets/simple_nav.html" %}
+    	{% block content %}
+
+    	{% endblock content %}
+    </div>
+
+{% include "snippets/jquery_bundle_snippet.html" %}
+</body>
+</html>

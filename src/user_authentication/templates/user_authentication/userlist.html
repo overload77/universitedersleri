@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<ol class="user-list">
+    {% for obj in object_list %}
+       <li>
+       		{{obj.username|capfirst}} - <a href="/delete_user/{{ obj.user_id }}">Delete User</a>
+            - <a href="/userlist/{{ obj.slug }}">Click For Account Information</a>
+       </li>
+    {% endfor %}
+</ol>
+{% endblock content %}

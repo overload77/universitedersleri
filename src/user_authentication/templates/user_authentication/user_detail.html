@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1> {{object.username}} Adlı üyenin tüm bilgileri aşağıdadır.. <br> </h1>
+
+<ol class="user-list">
+
+    <li> <b>Name: </b> {{object.first_name}} </li>
+    <li> <b>Surname: </b>{{object.last_name}} </li>
+    <li> <b>Mail: </b> {{object.email}} </li>
+    {% comment %}
+    <li> <b>Phone Number: </b> {{object.phone_number}} </li>
+    <li> <b>Adı: </b> {{object.name}} </li>
+    {% endcomment %}  
+    <li> <b>User Since: </b> {{object.timestamp}} </li>
+    <li> <b>Last Update: </b> {{object.updated}} </li>
+
+</ol>
+
+
+
+{% endblock content %}

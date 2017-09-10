@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   {% block title %} {{ block.super }} | PostList {% endblock title %}
+</head>
+<body>
+    {% block content %}
+    {{block.super}}
+    <h1> <b>The List Of Posts!</b> </h1> <br>
+    <h1>{{object.title}}</h1> <small>{{object.category}}</small>
+    <p> {{object.timestamp}} <br> {{object.updated|timesince}} ago </p>
+    {% endblock content %}
+</body>
+</html>

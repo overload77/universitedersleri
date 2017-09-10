@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   {% block title %} {{ block.super }} | PostList {% endblock title %}
+</head>
+<body>
+    {% block content %}
+    {{block.super}}
+    <h1> <b>The List Of Posts!</b> </h1> <br>
+    {% for obj in object_list %}
+    <p1> <b> {{obj.title}} </b> </p1> <br> <p3> <b> {{obj.content}} </b> </p3> <br> <br>
+    {% endfor %}
+    {% endblock content %}
+</body>
+</html>
