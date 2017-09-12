@@ -125,13 +125,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'universitedersleri', 'static', 'static_root')
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'universitedersleri', 'static', 'static_dirs'),
-)
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'universitedersleri', 'static', 'images')
-MEDIA_URL = '/media/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
 
 AUTH_USER_MODEL = 'user_authentication.User'

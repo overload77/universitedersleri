@@ -12,6 +12,8 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.conf import settings
+from django.conf.urls.static import static
 from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.auth.views import LoginView, logout
@@ -37,8 +39,8 @@ urlpatterns = [
     #url(r'^postlists/(?P<slug>\w+)/$', PostListView.as_view()),
     url(r'^postlists/(?P<post_id>\w+)/$', PostDetailView.as_view()),
     url(r'^home/', TemplateView.as_view(template_name='home.html')),
-
-
 ]
-
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    # CHANGE IF YOU ARE LIVE
 ## WARNING "delete_user" is for development stage, it is CSRF vulnerable

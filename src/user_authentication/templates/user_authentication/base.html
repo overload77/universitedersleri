@@ -6,18 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.25">
     <title>{% block head_title %}-Insert Title-{% endblock head_title %}</title>
     {% include "snippets/bootstrap_snippet.html" %}
+    {% block cssfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+    {% endblock cssfiles %}
 </head>
 <body>
-
-    <div class="container">
-        {% if user.is_authenticated %}
+    <div id="container">
+    <!--    {% if user.is_authenticated %}
             <span class="pull-right">Logged in as {{ user.get_username }} - <a href="/logout">Logout</a></span>
         {% else %}
             <span class="pull-right"><a href="/login" >Click To Login</a></span>
         {% endif %}
         
-    	{% include "snippets/simple_nav.html" %}
+
+-->
+        <header>
+            <img src='{%static "logo.png"%}' height="150px" width="300px" id="logo">
+            <input type = text id="ara" name="ara" placeholder="Herhangi bir konuyu arayın...">
+        </header>
+        <nav>
+            {% include "snippets/simple_nav.html" %}
+        </nav>
+
+        <footer></footer>
+
     	{% block content %}
 
     	{% endblock content %}
