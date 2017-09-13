@@ -3,24 +3,38 @@
 {% block cssfiles %}    <link rel="stylesheet" type="text/css" href="{% static 'user_authentication/style.css' %}"> {% endblock cssfiles %}
 
 {% block content %}
-
-<section>
-    <div class = signupForm>
-        <h3>Create Account</h3>
-        <form enctype="multipart/form-data" method="post">
-            {% csrf_token %}
-            {% for field in form %}
-                <br> {{ field.label_tag }} <br> {{ field }}
-                {% if field.help_text %}
-                    <small style="color: grey">{{ field.help_text|safe }}</small>
-                {% endif %}
-                {% for error in field.errors %}
-                <p style="color: red">{{ error|safe }}</p>
+<div class="Container">
+    <header>
+        <h1> Hesap Oluştur </h1>
+        <p style="display: inline"> Aşağıdaki bilgileri eksiksiz doldurarak üniversitedersleri.com üyesi olabilirsiniz. </p>
+        <p id ="member" style="display: inline">Zaten üye misin? <a href="/login"> Giriş Yap </a> </p>
+        <hr>
+    </header>
+    <aside id = "advantages">
+        <h3>  Neden Üye Olmalıyım ? </h3> <hr>
+        <ul>
+            <li>Takip ettiğiniz bir ders hakkında yeni bir makale yayınlandığında anında haberiniz olur.</li>
+            <li>Çıkmış vize ve final sorularını görebilme hakkına sahip olursunuz.</li>
+            <li>Makalelere yorum yapabilir, tartışma odalarında konular hakkında fikir beyan edebilirsiniz. </li>
+        </ul>
+    </aside> <!-- ADVANTAGES -->
+    <section>
+        <div class = signupForm>
+            <form enctype="multipart/form-data" method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                    {{ field.label_tag }} <br> {{ field }}
+                    {% if field.help_text %}
+                        <small style="color: grey">{{ field.help_text|safe }}</small> <br>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <p style="color: red">{{ error|safe }}</p>
+                    {% endfor %}
                 {% endfor %}
-            {% endfor %}
-            <button type="submit">Sign up</button>
-        </form>
-    </div>
-</section>
+                <button type="submit">Sign up</button>
+            </form>
+        </div>
+    </section> <!-- SIGN UP FORM -->
+</div>
 
 {% endblock content %}

@@ -11,7 +11,7 @@
     {% endblock cssfiles %}
 </head>
 <body>
-    <div id="container">
+    <div id="basecontainer">
     <!--    {% if user.is_authenticated %}
             <span class="pull-right">Logged in as {{ user.get_username }} - <a href="/logout">Logout</a></span>
         {% else %}
@@ -19,7 +19,7 @@
         {% endif %}
         
 
--->
+-->     <!-- HEADER, NAV VE FOOTER HER SAYFADA DURACAK -->
         <header>
             <img src='{%static "logo.png"%}' height="150px" width="300px" id="logo">
             <input type = text id="ara" name="ara" placeholder="Herhangi bir konuyu arayın...">

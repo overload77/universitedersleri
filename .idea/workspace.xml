@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84114966-8989-44b1-a96a-d428dc84949a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/universitedersleri/settings/base.py" afterPath="$PROJECT_DIR$/src/universitedersleri/settings/base.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/universitedersleri/urls.py" afterPath="$PROJECT_DIR$/src/universitedersleri/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user_authentication/forms.py" afterPath="$PROJECT_DIR$/src/user_authentication/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user_authentication/templates/snippets/simple_nav.html" afterPath="$PROJECT_DIR$/src/user_authentication/templates/snippets/simple_nav.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user_authentication/static/user_authentication/style.css" afterPath="$PROJECT_DIR$/src/user_authentication/static/user_authentication/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user_authentication/templates/user_authentication/base.html" afterPath="$PROJECT_DIR$/src/user_authentication/templates/user_authentication/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/user_authentication/templates/user_authentication/registration/signup.html" afterPath="$PROJECT_DIR$/src/user_authentication/templates/user_authentication/registration/signup.html" />
     </list>
@@ -22,7 +18,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user_authentication/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="15">
               <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="48" />
               <folding />
             </state>
@@ -32,13 +28,45 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user_authentication/static/user_authentication/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+            <state relative-caret-position="75">
+              <caret line="39" column="1" lean-forward="true" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
               <folding>
-                <element signature="e#233#478#0" expanded="false" />
-                <element signature="e#803#975#0" expanded="false" />
-                <element signature="e#1027#1212#0" expanded="false" />
-                <element signature="e#1224#1258#0" expanded="false" />
+                <element signature="e#4#69#0" expanded="false" />
+                <element signature="e#76#122#0" expanded="false" />
+                <element signature="e#128#190#0" expanded="false" />
+                <element signature="e#201#446#0" expanded="false" />
+                <element signature="e#450#488#0" expanded="false" />
+                <element signature="e#496#668#0" expanded="false" />
+                <element signature="e#680#720#0" expanded="false" />
+                <element signature="e#734#919#0" expanded="false" />
+                <element signature="e#938#972#0" expanded="false" />
+                <element signature="e#984#1165#0" expanded="false" />
+                <element signature="e#1207#1258#0" expanded="false" />
+                <element signature="e#1278#1307#0" expanded="false" />
+                <element signature="e#1333#1354#0" expanded="false" />
+                <element signature="e#1371#1444#0" expanded="false" />
+                <element signature="e#1467#1532#0" expanded="false" />
+                <element signature="e#1553#1604#0" expanded="false" />
+                <element signature="e#1663#1718#0" expanded="false" />
+                <element signature="e#1742#1776#0" expanded="false" />
+                <element signature="e#1789#1861#0" expanded="false" />
+                <element signature="e#1879#1928#0" expanded="false" />
+                <element signature="e#1948#2116#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signup.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/user_authentication/templates/user_authentication/registration/signup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#header#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#header#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#aside#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#section#0;n#div#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -47,9 +75,21 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user_authentication/templates/user_authentication/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="56" lean-forward="false" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+            <state relative-caret-position="330">
+              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/universitedersleri/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+              <folding>
+                <element signature="e#651#683#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,8 +97,8 @@
       <file leaf-file-name="simple_nav.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user_authentication/templates/snippets/simple_nav.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+            <state relative-caret-position="120">
+              <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -150,10 +190,10 @@
         <option value="$PROJECT_DIR$/lib/python3.5/site-packages/django/contrib/auth/forms.py" />
         <option value="$PROJECT_DIR$/src/user_authentication/forms.py" />
         <option value="$PROJECT_DIR$/src/user_authentication/templates/snippets/simple_nav.html" />
-        <option value="$PROJECT_DIR$/src/user_authentication/templates/user_authentication/registration/signup.html" />
         <option value="$PROJECT_DIR$/src/universitedersleri/urls.py" />
         <option value="$PROJECT_DIR$/src/universitedersleri/settings/base.py" />
         <option value="$PROJECT_DIR$/src/user_authentication/templates/user_authentication/base.html" />
+        <option value="$PROJECT_DIR$/src/user_authentication/templates/user_authentication/registration/signup.html" />
         <option value="$PROJECT_DIR$/src/user_authentication/static/user_authentication/style.css" />
       </list>
     </option>
@@ -228,7 +268,37 @@
               <item name="universitedersleri.com" type="b2602c69:ProjectViewProjectNode" />
               <item name="universitedersleri.com" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="universitedersleri" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="universitedersleri.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="universitedersleri.com" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="user_authentication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="universitedersleri.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="universitedersleri.com" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="user_authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="universitedersleri.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="universitedersleri.com" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="user_authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="user_authentication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="universitedersleri.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="universitedersleri.com" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="user_authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="user_authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="registration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="universitedersleri.com" type="b2602c69:ProjectViewProjectNode" />
@@ -603,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
           <caret line="98" column="13" lean-forward="true" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -611,7 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="79" column="15" lean-forward="false" selection-start-line="79" selection-start-column="15" selection-end-line="79" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -619,7 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="314" column="34" lean-forward="false" selection-start-line="314" selection-start-column="34" selection-end-line="314" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -627,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -635,15 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user_authentication/templates/user_authentication/registration/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -667,25 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
           <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/universitedersleri/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="44" column="4" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
-          <folding>
-            <element signature="e#651#683#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user_authentication/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -693,35 +731,82 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
           <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user_authentication/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="48" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/universitedersleri/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+          <folding>
+            <element signature="e#651#683#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user_authentication/templates/user_authentication/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="56" lean-forward="false" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        <state relative-caret-position="330">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user_authentication/templates/snippets/simple_nav.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        <state relative-caret-position="120">
+          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user_authentication/templates/user_authentication/registration/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#header#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#header#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#aside#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#section#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user_authentication/static/user_authentication/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+        <state relative-caret-position="75">
+          <caret line="39" column="1" lean-forward="true" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
           <folding>
-            <element signature="e#233#478#0" expanded="false" />
-            <element signature="e#803#975#0" expanded="false" />
-            <element signature="e#1027#1212#0" expanded="false" />
-            <element signature="e#1224#1258#0" expanded="false" />
+            <element signature="e#4#69#0" expanded="false" />
+            <element signature="e#76#122#0" expanded="false" />
+            <element signature="e#128#190#0" expanded="false" />
+            <element signature="e#201#446#0" expanded="false" />
+            <element signature="e#450#488#0" expanded="false" />
+            <element signature="e#496#668#0" expanded="false" />
+            <element signature="e#680#720#0" expanded="false" />
+            <element signature="e#734#919#0" expanded="false" />
+            <element signature="e#938#972#0" expanded="false" />
+            <element signature="e#984#1165#0" expanded="false" />
+            <element signature="e#1207#1258#0" expanded="false" />
+            <element signature="e#1278#1307#0" expanded="false" />
+            <element signature="e#1333#1354#0" expanded="false" />
+            <element signature="e#1371#1444#0" expanded="false" />
+            <element signature="e#1467#1532#0" expanded="false" />
+            <element signature="e#1553#1604#0" expanded="false" />
+            <element signature="e#1663#1718#0" expanded="false" />
+            <element signature="e#1742#1776#0" expanded="false" />
+            <element signature="e#1789#1861#0" expanded="false" />
+            <element signature="e#1879#1928#0" expanded="false" />
+            <element signature="e#1948#2116#0" expanded="false" />
           </folding>
         </state>
       </provider>
