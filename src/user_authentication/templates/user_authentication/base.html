@@ -19,7 +19,7 @@
         {% endif %}
         
 
--->     <!-- HEADER, NAV VE FOOTER HER SAYFADA DURACAK -->
+-->     <!-- HEADER, NAV VE FOOTER HER SAYFADA DURACAK ( ASIDE MENU EKLENEBİLİR ) -->
         <header>
             <img src='{%static "logo.png"%}' height="150px" width="300px" id="logo">
             <input type = text id="ara" name="ara" placeholder="Herhangi bir konuyu arayın...">
@@ -27,12 +27,11 @@
         <nav>
             {% include "snippets/simple_nav.html" %}
         </nav>
-
-        <footer></footer>
-
     	{% block content %}
-
     	{% endblock content %}
+        <footer>
+            <p> © Copyright 2017 - 2017 <br> Yayın Hakları Ömer Miraç Baydemir | Dersu Ozan Ercan'a aittir. </p>
+        </footer>
     </div>
 
 {% include "snippets/jquery_bundle_snippet.html" %}

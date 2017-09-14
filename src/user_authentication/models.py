@@ -4,7 +4,6 @@ from django.contrib.auth import get_user_model
 from django.utils import timezone
 from django.db.models.signals import pre_save, post_save
 from .utils import unique_slug_generator
-from django.conf import settings
 
 
 # Create your models here.
