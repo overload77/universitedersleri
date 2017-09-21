@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.25">
-    <title>{% block head_title %}-Insert Title-{% endblock head_title %}</title>
+    <title>{% block head_title %} UniDers {% endblock head_title %}</title>
     {% include "snippets/bootstrap_snippet.html" %}
     {% block cssfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'user_authentication/style.css' %}">
     {% endblock cssfiles %}
 </head>
 <body>
@@ -21,14 +22,34 @@
 
 -->     <!-- HEADER, NAV VE FOOTER HER SAYFADA DURACAK ( ASIDE MENU EKLENEBİLİR ) -->
         <header>
-            <img src='{%static "logo.png"%}' height="150px" width="300px" id="logo">
-            <input type = text id="ara" name="ara" placeholder="Herhangi bir konuyu arayın...">
+            <a href="/"><img src='{%static "logo.png"%}' height="150px" width="300px" id="logo"></a>
+            {# <input type = text id="ara" name="ara" placeholder="Herhangi bir konuyu arayın..."> #}
+
+            <form class='form' method='GET' action='/posts/' style="display: inline-table; width:50%;">
+            <input type='text' id="ara" placeholder="Herhangi bir konuyu arayın..." name='q' value='{{ request.GET.q }}'>
+            <button class='btn btn-default' type='submit' style="display:none;">Search</button>
+            </form>
+
+            <!-- LOGIN BUTONU -->
+            <span style="position: absolute; font-size: 1.25em; margin-left: 25px; margin-top:33px">
+                {% if user.is_authenticated %}
+                <span>Logged in as {{ user.get_username }} - <a href="/logout">Logout</a></span>
+                {% else %}
+                <span><a href="/login" >Click To Login</a></span>
+                {% endif %}
+            </span>
+
         </header>
+
         <nav>
             {% include "snippets/simple_nav.html" %}
         </nav>
-    	{% block content %}
-    	{% endblock content %}
+
+        <div class="container">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    	
         <footer>
             <p> © Copyright 2017 - 2017 <br> Yayın Hakları Ömer Miraç Baydemir | Dersu Ozan Ercan'a aittir. </p>
         </footer>

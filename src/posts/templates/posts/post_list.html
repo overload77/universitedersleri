@@ -1,17 +1,29 @@
-<!DOCTYPE html>
 {% extends "base.html" %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-   {% block title %} {{ block.super }} | PostList {% endblock title %}
-</head>
-<body>
-    {% block content %}
-    {{block.super}}
-    <h1> <b>The List Of Posts!</b> </h1> <br>
-    {% for obj in object_list %}
-    <p1> <b> {{obj.title}} </b> </p1> <br> <p3> <b> {{obj.content}} </b> </p3> <br> <br>
-    {% endfor %}
-    {% endblock content %}
-</body>
-</html>
+
+   {% block head_title %} PostList | {{ block.super }} {% endblock head_title %}
+
+{% block content %}
+{% if post_list %}
+	
+
+<div style="margin-top:25px;">
+	<h1 style="display: inline;"> <b>The List Of Posts!</b> </h1> | 
+	<a href="{% url 'post-create' %}"><h3 style="display: inline;">New Post</h3></a> <br>
+</div>
+
+{% for obj in object_list %}
+<div class="row">
+	<div class="col-sm-12" style="margin: 15px 0 15px; ">
+		<div class="card card-default" style="padding: 10px; ">
+			<h4>{{ obj.title }}</h4>
+			<p><a href="{% url "post-detail" post_id=obj.pk %}">Go to Post</a> | {{obj.category}}</p>
+		</div>
+	</div>
+</div>
+
+{% endfor %}
+
+{% else %}
+<p class="lead" style="margin-top:25px;">Makale Bulunamadı :(</p>
+{% endif %}
+{% endblock content %}

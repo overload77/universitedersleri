@@ -3,7 +3,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.views import View
 from django.views.generic import TemplateView, ListView, DetailView, CreateView
 
@@ -29,6 +29,15 @@ class UserDetailView(LoginRequiredMixin, DetailView):
 			queryset = None
 		print("QuerySet: ", queryset)
 		return queryset
+
+class AuthorDetailView(DetailView):
+	template_name = 'author_detail.html'
+
+	def get_object(self):
+		username = self.kwargs.get("username")
+		if username is None or username == '':
+			raise Http404
+		return get_object_or_404(User, username__iexact=username, is_active=True)
 
 
 def delete_user(request, id):

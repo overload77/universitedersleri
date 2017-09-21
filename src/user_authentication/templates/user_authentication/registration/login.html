@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-{% if form.errors %}
+<div style="font-size:1.3em; padding: 20px 0px;">
+            {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
 
@@ -35,5 +35,7 @@
 </form>
 
 {# Assumes you setup the password_reset view in your URLconf #}
+</div>
+
 
 {% endblock %}

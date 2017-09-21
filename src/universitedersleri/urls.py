@@ -17,10 +17,10 @@ from django.conf.urls.static import static
 from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.auth.views import LoginView, logout
-from posts.views import PostTemplateView, PostListView, PostDetailView
+from posts.views import PostCreateView, PostDetailView, PostListView
 from django.views.generic import TemplateView, CreateView
 
-from user_authentication.views import UserListView, UserDetailView, signup, delete_user
+from user_authentication.views import UserListView, UserDetailView, AuthorDetailView, signup, delete_user
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -33,11 +33,16 @@ urlpatterns = [
     url(r'^new-user/$', signup, name='signup'),
     url(r'^delete_user/(?P<id>\d+)$', delete_user, name='get_delete'),
 
+    # <---------------- AUTHOR URL -------------->
+    url(r'^authors/(?P<username>[\w-]+)/$', AuthorDetailView.as_view(), name='author-detail'),
     # <---------------- POST LIST APP'S URL'S -------------->
-    url(r'^posts/$', PostTemplateView.as_view()),
-    url(r'^postlists/$', PostListView.as_view()),
-    #url(r'^postlists/(?P<slug>\w+)/$', PostListView.as_view()),
-    url(r'^postlists/(?P<post_id>\w+)/$', PostDetailView.as_view()),
+    
+    url(r'^posts/create/$', PostCreateView.as_view(), name='post-create'),
+    url(r'^posts/$', PostListView.as_view(), name='post-list'),
+    url(r'^posts/(?P<post_id>\w+)/$', PostDetailView.as_view(), name='post-detail'),
+    # url(r'^posts/$', PostTemplateView.as_view()),
+    # url(r'^postlists/(?P<slug>\w+)/$', PostListView.as_view()),
+    # url(r'^postlists/(?P<post_id>\w+)/$', PostDetailView.as_view()),
     url(r'^home/', TemplateView.as_view(template_name='home.html')),
 ]
 if settings.DEBUG:
