@@ -1,0 +1,1 @@
+web: gunicorn universitedersleri.wsgi --log-file -

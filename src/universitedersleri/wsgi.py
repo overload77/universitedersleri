@@ -10,7 +10,9 @@ https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/
 import os
 
 from django.core.wsgi import get_wsgi_application
+from whitenoise.django import DjangoWhiteNoise  ##HEROKU
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "universitedersleri.settings")
 
 application = get_wsgi_application()
+application = DjangoWhiteNoise(application)   ##HEROKU
