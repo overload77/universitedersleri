@@ -41,12 +41,12 @@ class PostListView(ListView):
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        if query:
-            print("Query is:", query)
-            queryset = Post.objects.filter(Q(title__icontains=query) | Q(content__icontains=query))
-        else:
-            queryset = Post.objects.all()
-
+        # if query:
+        #     print("Query is:", query)
+        #     queryset = Post.objects.filter(Q(title__icontains=query) | Q(content__icontains=query))
+        # else:
+        #     queryset = Post.objects.all()
+        queryset = Post.objects.search(query)
         return queryset
 
     # def get_context_data(self, *args, **kwargs):

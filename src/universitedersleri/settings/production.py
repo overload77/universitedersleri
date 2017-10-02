@@ -25,7 +25,7 @@ SECRET_KEY = '$9zlg-&+&y2rup_js$r95fcpehut4%7rdoms=*ho%)t5+5)0kc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['universitedersleri.herokuapp.com']
 
 
 # Application definition
@@ -91,8 +91,6 @@ import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
 ##-------------- HEROKU -------------##
 
 
@@ -142,3 +140,16 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
 
 AUTH_USER_MODEL = 'user_authentication.User'
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+
+CORS_REPLACE_HTTPS_REFERER      = True
+HOST_SCHEME                     = "https://"
+SECURE_PROXY_SSL_HEADER         = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT             = True
+SESSION_COOKIE_SECURE           = True
+CSRF_COOKIE_SECURE              = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
+SECURE_HSTS_SECONDS             = 1000000
+SECURE_FRAME_DENY               = True

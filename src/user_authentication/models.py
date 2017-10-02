@@ -18,7 +18,7 @@ class User(AbstractUser):
     user_id = models.AutoField(primary_key=True)
 
     # Foreign Keys
-    cities = models.ForeignKey('Cities', on_delete=models.CASCADE,default=1)
+    cities = models.ForeignKey('Cities', on_delete=models.CASCADE,null=True, blank=True)
 
     born_date = models.DateField(auto_now=False, auto_now_add=False, default = timezone.now)
     gender = models.CharField(max_length=5, choices=gender_choices, null=True)

@@ -54,7 +54,9 @@ ROOT_URLCONF = 'universitedersleri.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'user_authentication/templates/user_authentication'),
+                 os.path.join(BASE_DIR, 'posts/templates/posts'),
+                 ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

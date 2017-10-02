@@ -3,14 +3,14 @@
    {% block head_title %} PostList | {{ block.super }} {% endblock head_title %}
 
 {% block content %}
-{% if post_list %}
-	
 
 <div style="margin-top:25px;">
 	<h1 style="display: inline;"> <b>The List Of Posts!</b> </h1> | 
 	<a href="{% url 'post-create' %}"><h3 style="display: inline;">New Post</h3></a> <br>
 </div>
 
+{% if post_list %}
+	
 {% for obj in object_list %}
 <div class="row">
 	<div class="col-sm-12" style="margin: 15px 0 15px; ">
