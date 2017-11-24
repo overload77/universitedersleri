@@ -1,60 +1,81 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="uni-app">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.25">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block head_title %} UniDers {% endblock head_title %}</title>
     {% include "snippets/bootstrap_snippet.html" %}
     {% block cssfiles %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'user_authentication/style.css' %}">
     {% endblock cssfiles %}
 </head>
 <body>
     <div id="basecontainer">
-    <!--    {% if user.is_authenticated %}
-            <span class="pull-right">Logged in as {{ user.get_username }} - <a href="/logout">Logout</a></span>
-        {% else %}
-            <span class="pull-right"><a href="/login" >Click To Login</a></span>
-        {% endif %}
-        
 
--->     <!-- HEADER, NAV VE FOOTER HER SAYFADA DURACAK ( ASIDE MENU EKLENEBİLİR ) -->
-        <header>
-            <a href="/"><img src='{%static "logo.png"%}' height="150px" width="300px" id="logo"></a>
+    <!-- HEADER, NAV VE FOOTER HER SAYFADA DURACAK ( ASIDE MENU EKLENEBİLİR ) -->
+        <!--<header id="header-adjust">-->
+            <!--<nav id="header-nav" class="navbar navbar-default">-->
+                <div id="navbar-div" class="container navbar navbar-default">
+                    <!-- style="float:none;" -->
+                        <a href="/" class="hidden-xs"><img src='{%static "logo.png"%}' height="150px" width="300px" id="logo"><div></div></a>
+
+                        <form class='form' id="search-form" method='GET' action='/posts/' style="display: inline-table;">
+                        <input type='text' id="ara" placeholder="Herhangi bir konuyu arayın..." name='q' value='{{ request.GET.q }}'>
+                        <button class='btn btn-default' type='submit' style="display:none;">Search</button>
+                        </form>
+
+                        <button id="navbarToggle" type="button" class="navbar-toggle collapsed" 
+                        data-toggle="collapse" data-target="#collapsed-navbar" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>             
+                                                     
+                    
+                    <navlist></navlist>
+
+                    
+                </div>
+            <!--</nav>
+            </header>-->
+
+            <!--<a href="/"><img src='{%static "logo.png"%}' height="150px" width="300px" id="logo"></a>
             {# <input type = text id="ara" name="ara" placeholder="Herhangi bir konuyu arayın..."> #}
 
             <form class='form' method='GET' action='/posts/' style="display: inline-table; width:50%;">
             <input type='text' id="ara" placeholder="Herhangi bir konuyu arayın..." name='q' value='{{ request.GET.q }}'>
             <button class='btn btn-default' type='submit' style="display:none;">Search</button>
-            </form>
+            </form> -->
 
             <!-- LOGIN BUTONU -->
-            <span style="position: absolute; font-size: 1.25em; margin-left: 25px; margin-top:33px">
+            <!-- <span class="col-xs-hidden" style="position: absolute; font-size: 1.25em; margin-left: 25px; margin-top:33px">
                 {% if user.is_authenticated %}
                 <span>Logged in as {{ user.get_username }} - <a href="/logout">Logout</a></span>
                 {% else %}
                 <span><a href="/login" >Click To Login</a></span>
                 {% endif %}
-            </span>
+            </span> -->
 
-        </header>
+        
 
-        <nav>
-            {% include "snippets/simple_nav.html" %}
-        </nav>
-
-        <div class="container">
+        <!--<nav>
+            {# {% include "snippets/simple_nav.html" %} #}
+        </nav>-->
+            
+        <div  id="main-content" class="container">
             {% block content %}
             {% endblock content %}
         </div>
     	
-        <footer>
-            <p> © Copyright 2017 - 2017 <br> Yayın Hakları Ömer Miraç Baydemir | Dersu Ozan Ercan'a aittir. </p>
-        </footer>
+        <div class="container">
+            <footer>
+                <p> © Copyright 2017 - 2017 <br> Yayın Hakları Ömer Miraç Baydemir | Dersu Ozan Ercan'a aittir. </p>
+            </footer>
+        </div>
     </div>
-
+    
 {% include "snippets/jquery_bundle_snippet.html" %}
 </body>
 </html>

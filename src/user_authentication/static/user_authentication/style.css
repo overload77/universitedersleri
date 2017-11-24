@@ -4,6 +4,10 @@ body{
     background-color: #f2f2f2;
 
 }
+h1 {
+    margin:0;
+    padding:0;
+}
 header{
     height: 130px;
     margin-bottom: 0px;
@@ -13,8 +17,14 @@ header{
     position: relative;
     bottom: 20px;
 }
+
+#search-form {
+	width:50%;
+}
+
 input#ara {
 /*    width: 40%;*/
+	width: 90%;
     height: 40px;
     background-color: white;
     background-image: url("toolbar_find.png");
@@ -22,13 +32,13 @@ input#ara {
     background-repeat: no-repeat;
     padding-left: 40px;
     float: left;
-    margin: 40px 60px;
+    margin: 40px 60px 40px 85px;
 }
 nav{
     width: 100%;
     height: 50px;
 }
-nav ul {
+#collapsed-navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -38,11 +48,11 @@ nav ul {
     position: relative;
     bottom: 23px;
 }
-nav ul li {
+#collapsed-navbar ul li {
     float: left;
     display: block;
 }
-nav ul li a {
+#collapsed-navbar ul li a {
     font-family: FreeSerif;
     display: inline-block;
     color: white;
@@ -51,7 +61,7 @@ nav ul li a {
     text-decoration: none;
     border-right: 1px solid #555;
 }
-nav ul li a:hover{
+#collapsed-navbar ul li a:hover{
     background-color: #cccccc;
 }
 section{
@@ -126,7 +136,12 @@ input[type=text]:focus {
 }
 
 .form-control textarea {
-    width: 90%;
+    width:100%;
+    height:auto;
+}
+
+.form-control {
+    height:auto;
 }
 
 button[type=submit]{
@@ -138,4 +153,179 @@ button[type=submit]{
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+#muh {
+	font-size:1.2em;
+}
+
+#muh > a {
+	color:white;
+}
+
+#header-nav {
+    height:180px;
+}
+
+#login-form table tr td {
+    padding:5px 10px 5px 0;
+}
+
+#user-detail-h1 {
+    padding-left:10px;
+}
+
+.user-list{
+    padding-left:24px;
+    margin-top:10px;
+}
+
+.user-list li {
+    margin-top:2px;
+}
+
+@media (max-width: 767px) {
+    
+    .Container {
+        margin-top:0;
+        height:850px;
+    }
+
+    .Container aside {
+        padding:0;
+        width:100%;
+    }
+
+    .Container aside h3{
+        font-size:22px;
+        margin-bottom:20px;
+        padding-left:20px;
+    }
+
+    .Container aside ul li {
+        margin:0;
+        padding:0;
+    }
+
+    .Container aside ul {
+        margin-bottom:0;
+    }
+
+    .signup-header {
+        margin-bottom:15px;
+    }
+
+    #header-adjust {
+        height: 90px;
+    }
+
+    #header-nav {
+        height:80px;
+    }
+
+    #search-form {
+        width: 80%;
+    }
+
+    input#ara {
+        margin: 15px 15px;
+    }
+
+    #fixed-width label {
+        margin:8px auto;
+    }
+
+    #fixed-width input {
+        width:80%;
+    }
+
+    .signupForm {
+        width:100%;
+        font-size:1.2em;
+    }
+
+    .signupForm button {
+        width:80%;
+        margin-left:7px;
+    }
+
+    #navbarToggle{
+        margin:15px 15px;
+    }
+
+    #nav-list {
+        margin-top:23px !important;
+    }
+
+    #navbar-div {
+        max-height:370px;
+    }
+
+    #collapsed-navbar {
+        padding-left:0;
+        padding-right:0;
+        margin-left:-15px;
+        margin-right:-15px;
+    }
+
+    #collapsed-navbar ul li a {
+        border-right: none;
+    }
+
+    #nav-hr {
+        margin-top:2px;
+        margin-bottom:1px;
+        width:200px;
+    }
+
+    #main-content {
+        margin-top:35px;
+    }
+
+}
+
+@media (max-width: 405px){
+    #search-form {
+        width:75%;
+    }
+
+    #ara {
+        font-size:smaller;
+    }
+
+}
+
+@media (max-width: 327px){
+    #search-form {
+        width:65%;
+    }
+
+    #ara {
+        font-size:xx-small;
+    }
+
+}
+
+@media (min-width: 1200px){
+	/*.container {
+		margin: 10px 25px 0;
+	}*/
+
+    .Container aside {
+        padding:0;
+    }
+
+    #member {
+        width:300px;
+        margin-top:15px;
+        padding-top:5px;
+        font-size:1.2em;
+    }
+
+}
+
+@media (min-width: 980px) {
+    footer {
+        font-size:1.2em;
+    }
 }

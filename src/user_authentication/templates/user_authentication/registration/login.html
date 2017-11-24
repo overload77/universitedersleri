@@ -15,7 +15,7 @@
     {% endif %}
 {% endif %}
 
-<form method="post" action="{% url 'login' %}">
+<form id="login-form" method="post" action="{% url 'login' %}">
 {% csrf_token %}
 <table>
 <tr>
@@ -28,7 +28,7 @@
 </tr>
 </table>
 
-<p><a href="{% url 'signup' %}">Click To Sign Up</a></p>
+<p style="padding:10px 0;"><a href="{% url 'signup' %}">Click To Sign Up</a></p>
 
 <input type="submit" value="Login" />
 <input type="hidden" name="next" value="{{ next }}" />

@@ -8,7 +8,7 @@
 {% for p in user.post_set.all %}
 <div class="row">
     <div class="col-sm-12" style="margin-bottom: 10px;">
-        <div class="card card-default" style="padding: 8px;">
+        <div class="thumbnail" style="padding: 8px;">
                 <li>
                 	{{ p }} | {{ p.category }} | <a href="{% url 'post-detail' post_id=p.pk %}">Go to Post</a>
                 </li>
